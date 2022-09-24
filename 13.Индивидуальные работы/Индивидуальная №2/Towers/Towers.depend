@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1638389039 source:e:\cb\cbp\towers\main.cpp
+	<iostream>
+	<fstream>
+	<limits.h>
+

@@ -1,0 +1,119 @@
+#include <iostream>
+#include <fstream>
+#include <limits.h>
+
+using namespace std;
+
+struct plate
+{
+    int h;
+    int x;
+    int y;
+}I[100];
+
+int n;
+int Sum = 0;
+int lastx = INT_MAX;
+int lasty = INT_MAX;
+
+bool ExistElement()
+{
+    for(int i=0; i<n; i++)
+        if(I[i].h>0) return true;
+    return false;
+}
+
+void SelectElement(int &x)
+{
+    int xm = 0;
+
+    for(int i=1; i<n; i++)
+        if((I[i].h > I[xm].h))  // i = 1 - Так как мы предположили что х - первый элемент - максимальный   || (I[i].x < lasty)       || ((I[i].x<lasty) && (I[i].y<lastx))
+            xm = i;
+    if(I[xm].x <= lastx && I[xm].y < lasty)
+    {
+        x = xm;
+        lastx = I[xm].x;
+        lasty = I[xm].y;
+    }
+    else
+        if(I[xm].x <= lasty && I[xm].y < lastx)
+        {
+            x = xm;
+            lastx = I[xm].y;
+            lasty = I[xm].x;
+        }
+    else I[xm].h = 0;
+
+
+    cout << "\nMaximal element " << xm << "(" << xm+1 << ")"<< endl;
+    cout << "\nlastX " << lastx << " lastY " << lasty << endl;
+//        cout << "I\'ve selected " << x << " element x - " << I[x].x << " y - " << I[x].y << endl;
+//        cout << "\nlastX = " << lastx << " lastY = " << lasty << endl;
+}
+
+//void SelectElement(int &x)
+//{
+//    int xm = 0;
+//
+//    for(int i=1; i<n; i++)
+//        if((I[i].h > I[xm].h) && (I[i].x <= lastx) && (I[i].y <= lasty) )  // i = 1 - Так как мы предположили что х - первый элемент - максимальный   || (I[i].x < lasty)       || ((I[i].x<lasty) && (I[i].y<lastx))
+//        {
+//            xm = i;
+//            lastx = I[xm].x;
+//            lasty = I[xm].y;
+//        }
+//        else if((I[i].h > I[xm].h) && (I[i].x <= lasty) && (I[i].y <= lastx) )
+//        {
+//            xm = i;
+//            lastx = I[xm].y;
+//            lasty = I[xm].x;
+//        }
+//    x = xm;
+//        cout << "I\'ve selected " << x << " element x - " << I[x].x << " y - " << I[x].y << endl;
+//        cout << "\nlastX = " << lastx << " lastY = " << lasty << endl;
+//}
+
+void IncludeElement(int x)
+{
+    Sum+=I[x].h;
+    cout << "\nsum = " << Sum << endl;
+
+    I[x].h = 0;
+    cout << "\nI[x].h = " << I[x].h << endl;
+ }
+
+int main()
+{
+    fstream f("turturi.in", ios::in);
+    fstream of("turturi.out", ios::out);
+
+    if(!f.is_open()) cout << "File can not be red!" << endl;
+    else
+    {
+        int j=0;
+        f >> n;
+
+        while(!f.eof())
+        {
+            f >> I[j].x >> I[j].y >> I[j].h;
+            j++;
+        }
+
+        cout << n << endl;
+        for(int i=0; i<n; i++)
+            cout << I[i].x << " " << I[i].y << " " << I[i].h << endl;
+
+        int Plate;
+
+        while(ExistElement())
+        {
+            SelectElement(Plate);
+            IncludeElement(Plate);
+        }
+
+        of << "Maximal hight with such plates = " << Sum;
+
+    }
+    return 0;
+}

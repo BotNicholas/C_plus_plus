@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1653987868 source:e:\cb\cbp\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<Windows.h>
+
+1654382286 source:f:\projects\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<Windows.h>
+	<conio.h>
+	"Functions.h"
+
+1654551036 source:g:\projects\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<Windows.h>
+	<conio.h>
+	"Functions.h"
+
+1654373836 f:\projects\practica ii\functions.h
+	<fstream>
+
+1654382258 source:f:\projects\practica ii\functions.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+	"Functions.h"
+
+1654550852 source:g:\projects\practica ii\functions.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+	"Functions.h"
+
+1654373836 g:\projects\practica ii\functions.h
+	<fstream>
+
+1654382258 source:c:\users\user\desktop\practica ii\functions.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+	"Functions.h"
+
+1654373836 c:\users\user\desktop\practica ii\functions.h
+	<fstream>
+
+1654385315 source:c:\users\user\desktop\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<Windows.h>
+	<conio.h>
+	"Functions.h"
+
+1654551702 source:c:\users\nicholas\desktop\practica ii\functions.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+	"Functions.h"
+
+1654373836 c:\users\nicholas\desktop\practica ii\functions.h
+	<fstream>
+
+1654551036 source:c:\users\nicholas\desktop\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<Windows.h>
+	<conio.h>
+	"Functions.h"
+
+1654551702 source:g:\practica ii\functions.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+	"Functions.h"
+
+1654373836 g:\practica ii\functions.h
+	<fstream>
+
+1654551036 source:g:\practica ii\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	<Windows.h>
+	<conio.h>
+	"Functions.h"
+

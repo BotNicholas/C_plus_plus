@@ -1,0 +1,21 @@
+﻿------------------------------------------------------------------
+tip de strat| character code | character | color code | color    |
+------------|----------------|-----------|------------|----------|
+nisip       | 	    176      |	   ░	 |	6     | желтый   |   
+podzol      | 	    178      |	   ▓	 |	7     | белый    |
+pietris     | 	    177      |	   ▒	 |	4     | красный  |  
+granit      | 	    254      |	   ■	 |	9     | синий    |    
+marmura     | 	     35      |	   #	 |	2     | зеленый  |
+bazalt      | 	    206      |	   ╬	 |	14    | бержевый |
+piatra      | 	    30 	     |	   ▲	 |	8     | серый    |
+------------------------------------------------------------------
+
+granit marmura piatra < 5m - limitation
+
+
+************************
+Для цветов:
+
+#include <Windows.h>
+HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(handle, код_цвета);
